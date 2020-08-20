@@ -3,6 +3,8 @@ version: '3'
 services:
   ctpn6852-server:
     image: ctpn6852/python:2.7.14
+    ports:
+    - "6852:6852"
     stdin_open: true #后台运行
     tty: true #后台运行
     privileged: true #用友真正的root权限
