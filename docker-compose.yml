@@ -10,3 +10,5 @@ services:
       # 指定时区
       - TZ="Asia/Shanghai"
     container_name: ctpn6852-server
+    volumes:
+      - ./CTPN6852:/CTPN6852
