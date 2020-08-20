@@ -1,1 +1,1 @@
-sudo docker build -t ctpn6852/pyhton:2.7.14 .
+sudo docker build -t ctpn6852/python:2.7.14 .
