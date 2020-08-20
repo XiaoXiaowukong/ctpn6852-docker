@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  ctpn6852-server:
+    image: ctpn6852/python:2.7.14
+    stdin_open: true #后台运行
+    tty: true #后台运行
+    privileged: true #用友真正的root权限
+    environment:
+      # 指定时区
+      - TZ="Asia/Shanghai"
+    container_name: ctpn6852-server

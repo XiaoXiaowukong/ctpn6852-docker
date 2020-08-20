@@ -1,0 +1,1 @@
+sudo docker build -t ctpn6852/pyhton:2.7.14 .
