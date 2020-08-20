@@ -10,9 +10,3 @@ services:
       # 指定时区
       - TZ="Asia/Shanghai"
     container_name: ctpn6852-server
-    command:
-      - sh
-      - -c
-      - |
-        pip install --upgrade pip
-        pip install flask
