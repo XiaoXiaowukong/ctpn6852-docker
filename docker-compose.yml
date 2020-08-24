@@ -15,4 +15,4 @@ services:
     volumes:
       - ./CTPN6852:/CTPN6852
     working_dir: /CTPN6852/api/
-    command: ["uwsgi","--ini","ctpn6852.ini","-h","0.0.0.0","-p","6853"]
+    command: ["uwsgi","--ini","ctpn6852.ini"]
