@@ -1,0 +1,1 @@
+sudo docker build -t ctpn6852/nginx:1.6.2 .

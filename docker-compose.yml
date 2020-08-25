@@ -16,3 +16,11 @@ services:
       - ./CTPN6852:/CTPN6852
     working_dir: /CTPN6852/api/
 #    command: ["uwsgi","--ini","ctpn6852.ini"]
+  ctpn6852-nginx:
+        image: nginx  #需要nginx镜像，所以最好在本地事先生成一个nginx镜像
+        volumes:
+            - ./nginx.conf:/etc/nginx/conf.d/default.conf  #做配置映射
+        depends_on:
+            - webapp   #依赖webapp
+        ports:
+            - "8888:80"

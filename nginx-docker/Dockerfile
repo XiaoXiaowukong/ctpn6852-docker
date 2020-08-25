@@ -1,0 +1,2 @@
+FROM nginx:1.6.2
+MAINTAINER neo
