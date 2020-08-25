@@ -29,6 +29,7 @@ services:
     image: ctpn6852/nginx:1.16.1  #需要nginx镜像，所以最好在本地事先生成一个nginx镜像
     volumes:
       - ./nginx-docker/ctpn6852.conf:/etc/nginx/conf.d/ctpn6852.conf  #做配置映射
+      - ./nginx-docker/logs:/logs
     depends_on:
       - ctpn6852-server   #依赖webapp
     ports:
