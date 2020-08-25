@@ -1,2 +1,2 @@
-FROM nginx:1.6.2
+FROM nginx:1.16.1
 MAINTAINER neo
