@@ -30,3 +30,5 @@ services:
   ctpn6852-postgres:
     image: postgres:11.4
     container_name: ctpn6852-postgres
+    ports:
+      - "5432:5432"
