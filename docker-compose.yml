@@ -15,12 +15,17 @@ services:
     volumes:
       - ./CTPN6852:/CTPN6852
     working_dir: /CTPN6852/api/
+    depends_on: ctpn6852-postgres
 #    command: ["uwsgi","--ini","ctpn6852.ini"]
   ctpn6852-nginx:
-        image: ctpn6852/nginx:1.16.1  #需要nginx镜像，所以最好在本地事先生成一个nginx镜像
-        volumes:
-            - ./nginx-docker/ctpn6852.conf:/etc/nginx/conf.d/ctpn6852.conf  #做配置映射
-        depends_on:
-            - ctpn6852-server   #依赖webapp
-        ports:
-            - "6853:80"
+    image: ctpn6852/nginx:1.16.1  #需要nginx镜像，所以最好在本地事先生成一个nginx镜像
+    volumes:
+      - ./nginx-docker/ctpn6852.conf:/etc/nginx/conf.d/ctpn6852.conf  #做配置映射
+    depends_on:
+      - ctpn6852-server   #依赖webapp
+    ports:
+      - "6853:80"
+    container_name: ctpn6852-nginx
+  ctpn6852-postgres:
+    image: postgres:11.4
+    container_name: ctpn6852-postgres
