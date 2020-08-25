@@ -17,7 +17,7 @@ services:
     working_dir: /CTPN6852/api/
     depends_on:
       - ctpn6852-postgres
-    command: ["uwsgi","-d","--ini","ctpn6852.ini"]
+#    command: ["uwsgi","-d","--ini","ctpn6852.ini"]
   ctpn6852-nginx:
     image: ctpn6852/nginx:1.16.1  #需要nginx镜像，所以最好在本地事先生成一个nginx镜像
     volumes:
